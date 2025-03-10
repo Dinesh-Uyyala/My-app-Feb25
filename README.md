@@ -54,4 +54,6 @@ Git
 
 5) Send Project code to Repository
     git add . ----> changes to staged changes
-    
+    git commit -m "commit message"
+    git push --set-upstream origin master -f  ---> for the first time
+    git push
