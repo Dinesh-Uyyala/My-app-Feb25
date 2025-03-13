@@ -68,9 +68,8 @@ Git
 
 
 
-Directives:
+Directives:  Useful for alter the DOM
 ===========
-            Useful for alter the DOM
 
 1) Structural Directives
 
@@ -80,16 +79,14 @@ Directives:
 
                 ngClass, ngStyle
 
-
-Pipes
+Pipes:  Useful to alter the DOM format
 =====
-    Useful to alter the DOM format
-
 
     | uppercase
     | lowercase
     | Date
     | currency
+    | Date:'yyyy-MM-dd'
 
 
                 
