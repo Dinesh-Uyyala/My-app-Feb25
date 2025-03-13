@@ -1,3 +1,6 @@
+Steps to Install & Run Angular application
+==========================================
+
 1)  Install NodeJS
     check: 
         node -v
@@ -14,10 +17,13 @@
 4) Angular Application
     ng new my-app
 
+6) Move directory to Project
+    cd my-app
+
 5) open powershell as administrator (for the first time)
     set-ExecutionPolicy Unrestricted
 
-6) Run app
+6) Run application
     ng serve
 
 
