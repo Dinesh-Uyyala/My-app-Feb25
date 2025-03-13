@@ -63,3 +63,33 @@ Git
     git commit -m "commit message"
     git push --set-upstream origin master -f  ---> for the first time
     git push
+
+
+
+
+
+Directives:
+===========
+            Useful for alter the DOM
+
+1) Structural Directives
+
+                    *ngFor, *ngIf
+
+2) Attribute Directives
+
+                ngClass, ngStyle
+
+
+Pipes
+=====
+    Useful to alter the DOM format
+
+
+    | uppercase
+    | lowercase
+    | Date
+    | currency
+
+
+                
