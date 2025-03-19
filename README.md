@@ -89,4 +89,18 @@ Pipes:  Useful to alter the DOM format
     | Date:'yyyy-MM-dd'
 
 
-                
+
+
+
+Possible API Calls
+==================
+
+1) all                  get             get(URL)
+2) specific             get
+3) filtering            get             get(URL?filter=term)
+4) sorting              get             get(URL?sortBy=column&order=asc/desc)
+5) pagination           get             get(URL?limit=limit&page=page)
+
+6) create               post
+7) update               put
+8) delete               delete          delete(URL/id)
