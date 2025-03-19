@@ -7,6 +7,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
     {path:'data-binding',component:DataBindingComponent},
     {path:'directives',component:DirectivesComponent},
     {path:'employee',component:EmployeeComponent},
+    {path:'vehicle',component:VehicleComponent},
   ]},
   {path:'',component:LoginComponent},
   {path:'login',component:LoginComponent},

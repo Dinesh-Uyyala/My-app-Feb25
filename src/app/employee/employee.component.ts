@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent {
-
+  name:string='';
+  experience:number=0;
+  package:number=0;
+  empRole:string='';
   employees: any = [
     { name: 'sandeep', experience: 4, package: 1200000, role: 'UIDeveloper' },
     { name: 'amar', experience: 5, package: 1300000, role: 'UIDeveloper' },
@@ -20,4 +23,55 @@ export class EmployeeComponent {
     { name: 'smith', experience: 1, package: 300000, role: 'Testing Engineer' },
     { name: 'sujith', experience: 3.5, package: 350000, role: 'Testing Engineer' },
   ];
+
+  delete(i:number){
+    // alert(i);
+    this.employees.splice(i,1);
+  }
+
+  // sorting
+  sort(){
+    this.employees.sort((a:any,b:any)=>a.package-b.package);
+  }
+
+  // filter 
+  role:string='';
+  filter(){ 
+    // alert(this.role);
+    this.employees= this.employees.filter((employee:any)=>
+      employee.role==this.role)
+  }
+
+  // search- filter
+  term:string='';
+  search(){
+    this.employees= this.employees.filter((employee:any)=>employee.name.includes(this.term));
+  }
+
+  //Map
+  map(){
+    this.employees.map((employee:any)=>{
+
+      employee.package= employee.package+30000;
+      // return employee;
+    })
+  }
+
+  // Reduce
+  reduce(){
+    let totalCost= this.employees.reduce((sum:any,employee:any)=>sum+employee.package,0);
+    alert(totalCost);
+  }
+
+  // create
+
+  create(){
+    let employee={
+      name:this.name,
+      experience:this.experience,
+      package:this.package,
+      role:this.empRole
+    };
+    this.employees.unshift(employee);
+  }
 }
