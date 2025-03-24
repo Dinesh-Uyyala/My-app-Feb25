@@ -11,6 +11,7 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { DummyComponent } from './dummy/dummy.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
     {path:'create-vehicle',component:CreateVehicleComponent},
     {path:'dummy',component:DummyComponent},
     {path:'create-user',component:CreateUserComponent},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent},
   ]},
   {path:'',component:LoginComponent},
   {path:'login',component:LoginComponent},

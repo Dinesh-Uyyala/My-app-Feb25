@@ -96,7 +96,7 @@ Possible API Calls
 ==================
 
 1) all                  get             get(URL)
-2) specific             get
+2) specific             get             get(URL/id)
 3) filtering            get             get(URL?filter=term)
 4) sorting              get             get(URL?sortBy=column&order=asc/desc)
 5) pagination           get             get(URL?limit=limit&page=page)
