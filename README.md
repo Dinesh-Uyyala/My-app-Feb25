@@ -101,6 +101,33 @@ Possible API Calls
 4) sorting              get             get(URL?sortBy=column&order=asc/desc)
 5) pagination           get             get(URL?limit=limit&page=page)
 
-6) create               post
+6) create               post            post(URL,data)
 7) update               put
 8) delete               delete          delete(URL/id)
+
+
+
+
+
+
+1) Template Driven Forms--> [(ngModel)]
+            -html
+            -simple
+2) Reactive Forms--> 
+            -typescript
+            -complex
+
+
+
+
+Forms:
+======
+
+    1) FormGroup            -- Done
+    2) FormControl          -- Done
+    3) Nested FormGroup     -- Done
+    4) Dynamic Forms        -- Done
+    5) Form Array           -- Done
+    6) Validators           -- Done
+    
+
