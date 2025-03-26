@@ -40,7 +40,7 @@
             <th>Color</th>
             <th>Cost</th>
             <th>Fuel</th>
-            <th colspan="2">Actions</th>
+            <th colspan="3" style="text-align: center;">Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -53,6 +53,11 @@
         <td>
             <button routerLink="/dashboard/vehicle-details/{{vehicle.id}}"
              class="btn btn-primary">View</button>
+        </td>
+        <td>
+            <button 
+            routerLink="/dashboard/edit-vehicle/{{vehicle.id}}"
+             class="btn btn-warning">Edit</button>
         </td>
         <td>
             <button (click)="delete(vehicle.id)" 

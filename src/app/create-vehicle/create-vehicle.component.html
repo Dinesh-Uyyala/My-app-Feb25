@@ -1,3 +1,7 @@
+<h1 *ngIf="!id">Create Vehicle</h1>
+<h1 *ngIf="id">Update Vehicle</h1>
+
+<h1>{{id?'Update Vehicle':'Create vehicle'}}</h1>
 <form [formGroup]="vehicleForm">
     <label>Vehicle Name</label>
     <input type="text" formControlName="Vehicle"><br>
@@ -8,5 +12,5 @@
     <label>Fuel</label>
     <input type="text" formControlName="fuel"><br>
     <button (click)="create()" 
-        class="btn btn-info">Create Vehicle</button>
+        class="btn btn-info">{{id?'Update Vehicle':'Create vehicle'}}</button>
 </form>

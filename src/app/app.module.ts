@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -17,6 +16,8 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { DummyComponent } from './dummy/dummy.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,8 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
     DummyComponent,
     CreateUserComponent,
     VehicleDetailsComponent,
+    Sibling1Component,
+    Sibling2Component,
     
   ],
   imports: [
