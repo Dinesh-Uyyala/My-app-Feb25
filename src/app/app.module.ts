@@ -18,6 +18,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
+import { CapitalDirective } from './capital.directive';
+import { BalancePipe } from './balance.pipe';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { Sibling2Component } from './sibling2/sibling2.component';
     VehicleDetailsComponent,
     Sibling1Component,
     Sibling2Component,
+    CapitalDirective,
+    BalancePipe,
     
   ],
   imports: [

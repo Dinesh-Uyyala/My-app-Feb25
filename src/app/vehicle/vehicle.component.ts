@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
+import { UpperCasePipe } from "@angular/common";
+import { BalancePipe } from "../balance.pipe";
 
 @Component({
   selector: 'app-vehicle',
