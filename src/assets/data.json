@@ -1,0 +1,74 @@
+[
+    {
+        "Vehicle": "Yamaha ",
+        "manufacturer": "YAMAHA Motors",
+        "model": "FZ-S",
+        "type": "2 Wheeler",
+        "fuel": "Petrol",
+        "color": "dark knight",
+        "image": "https://loremflickr.com/640/480/nightlife",
+        "cost": 105000,
+        "tyres": 2,
+        "id": "153"
+      },
+      {
+        "Vehicle": "Jaguar Taurus",
+        "manufacturer": "Mini",
+        "model": "Element",
+        "type": "Convertible",
+        "fuel": "Diesel",
+        "color": "sky blue",
+        "image": "https://loremflickr.com/640/480/nature",
+        "cost": "605.00",
+        "tyres": 29,
+        "id": "161"
+      },
+      {
+        "Vehicle": "Volkswagen Land Cruiser",
+        "manufacturer": "Bugatti",
+        "model": "A8",
+        "type": "Crew Cab Pickup",
+        "fuel": "Hybrid",
+        "color": "grey",
+        "image": "https://loremflickr.com/640/480/sports",
+        "cost": "51.00",
+        "tyres": 7,
+        "id": "163"
+      },
+      {
+        "Vehicle": "Audi Prius",
+        "manufacturer": "Hyundai",
+        "model": "Cruze",
+        "type": "SUV",
+        "fuel": "Electric",
+        "color": "grey",
+        "image": "https://loremflickr.com/640/480/nature",
+        "cost": "414.00",
+        "tyres": 17,
+        "id": "168"
+      },
+      {
+        "Vehicle": "Volkswagen Alpine",
+        "manufacturer": "Hyundai",
+        "model": "Roadster",
+        "type": "Passenger Van",
+        "fuel": "Hybrid",
+        "color": "ivory",
+        "image": "https://loremflickr.com/640/480/sports",
+        "cost": "387.00",
+        "tyres": 55,
+        "id": "170"
+      },
+      {
+        "Vehicle": "Maserati Accord",
+        "manufacturer": "Rolls Royce",
+        "model": "Jetta",
+        "type": "Coupe",
+        "fuel": "Diesel",
+        "color": "magenta",
+        "image": "https://loremflickr.com/640/480/business",
+        "cost": "531.00",
+        "tyres": 5,
+        "id": "171"
+      }
+]
