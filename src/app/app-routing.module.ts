@@ -15,6 +15,7 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { AuthenticationGuard } from './authentication.guard';
 import { AboutCeoComponent } from './about-us/about-ceo/about-ceo.component';
 import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
+import { LifeCycleHooksComponent } from './about-us/life-cycle-hooks/life-cycle-hooks.component';
 
 
 const routes: Routes = [
@@ -34,7 +35,8 @@ const routes: Routes = [
     {
       path: 'payments',
       loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
-    }
+    },
+    {path:'life-cycle-hooks',component:LifeCycleHooksComponent},
   ]},
   {path:'',component:LoginComponent},
   {path:'login',component:LoginComponent},

@@ -131,3 +131,83 @@ Forms:
     6) Validators           -- Done
     
 
+
+
+
+
+
+Git:
+====
+
+1) Laptop <-> GitHub(website)
+
+    1) Install Git
+    2) Create an account in GitHub
+    3) configure gitHub account
+
+        git config --global user.name "XXXXXX"
+        git config --global user.email "XXXXXX"
+
+        check:
+        ======
+            git config --list
+
+2) Local Project <-> Repository
+
+    1) git init
+    2) Create a repository in the GitHub
+    3) git remote add origin URL
+
+        Check:
+        ======
+            git remote -v
+
+
+3) Process
+
+    1) git add . ---> Changes to Staged changes
+    2) git commit -m "Commit Message"  ---> Changes to 0
+    3) git push  --> check commits in GitHub
+
+
+4) Process with Branches
+
+    1) create a branch in GitHub
+    2) git fetch
+    3) git checkout branchName
+
+            1) git add .
+            2) git commit -m "Commit Message"
+            3) git pull origin master
+            4) git push
+
+            Pull Request-> Approve-> Merge     
+
+5) Merge Conflicts
+    1) checkout to the branch
+    2) git pull origin master
+    3) accept current/accept incoming/ accept both
+    4) git push
+
+6) Shift Branches
+    1) commit changes then shift
+    2) Stash changes
+        (git stash --include-untracked)
+        shift branch
+        coming back and do (git stash pop)
+
+7) Delete Commit from Branch
+    1) git log
+        111111 
+        222222 
+    2) git reset 222222
+
+8) Move Commit to Another branch
+    git cherry-pick XXXXXXX
+
+9) Two branches code into one branch
+
+    create 3rd branch and checkout
+
+    git pull origin feature/one
+    git pull origin feature/two
