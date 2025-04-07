@@ -31,4 +31,9 @@ export class LoginComponent {
       }
     )
   }
+
+  isVisible:boolean=false;
+  visible(){
+    this.isVisible=!this.isVisible
+  }
 }

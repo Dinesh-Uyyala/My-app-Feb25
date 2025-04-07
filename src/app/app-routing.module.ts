@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, PreloadAllModules, Router, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ErrorComponent } from './error/error.component';
@@ -16,6 +16,8 @@ import { AuthenticationGuard } from './authentication.guard';
 import { AboutCeoComponent } from './about-us/about-ceo/about-ceo.component';
 import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
 import { LifeCycleHooksComponent } from './about-us/life-cycle-hooks/life-cycle-hooks.component';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { LoaderService } from './loader.service';
 
 
 const routes: Routes = [
@@ -37,6 +39,7 @@ const routes: Routes = [
       loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
     },
     {path:'life-cycle-hooks',component:LifeCycleHooksComponent},
+    {path:'calculator',component:CalculatorComponent},
   ]},
   {path:'',component:LoginComponent},
   {path:'login',component:LoginComponent},
@@ -47,4 +50,14 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  constructor(private router: Router, private loaderService: LoaderService) {
+    this.router.events.subscribe(event => {
+    if (event instanceof NavigationStart) {
+    this.loaderService.show();
+    } else if (event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {
+    this.loaderService.hide();
+    }
+    });
+    }
+}
