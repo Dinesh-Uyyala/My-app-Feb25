@@ -18,6 +18,7 @@ import { AboutCompanyComponent } from './about-us/about-company/about-company.co
 import { LifeCycleHooksComponent } from './about-us/life-cycle-hooks/life-cycle-hooks.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { LoaderService } from './loader.service';
+import { BookComponent } from './book/book.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
     {path:'edit-vehicle/:id',component:CreateVehicleComponent},
     {path:'about-ceo',component:AboutCeoComponent}, 
     {path:'about-company',component:AboutCompanyComponent},
+    {path:'book',component:BookComponent},
     {
       path: 'payments',
       loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)

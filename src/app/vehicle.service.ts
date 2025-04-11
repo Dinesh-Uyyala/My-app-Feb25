@@ -42,4 +42,13 @@ export class VehicleService {
   updateVehicle(id:any,data:any):Observable<any>{
     return this._httpClient.put(this.baseUrl+"/"+id,data);
   }
+
+  // Search users by name
+    // searchUsers(term: string): Observable<any> {
+    //   return this._httpClient.get<any>(`${this.baseUrl}?name_like=${term}`);
+    // }
+
+    getPinterest():Observable<any>{
+      return this._httpClient.get('https://picsum.photos/v2/list?page=1&limit=100');
+    }
 }

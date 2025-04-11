@@ -14,7 +14,7 @@ export interface User {
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+  private apiUrl = 'https://jsonplaceholder.typicode.com/user';
 
   constructor(private _httpClient: HttpClient) { }
 
@@ -34,8 +34,8 @@ export class UserService {
   }
 
   // Update existing user
-  updateUser(id: number, user: User): Observable<User> {
-    return this._httpClient.put<User>(`${this.apiUrl}/${id}`, user);
+  updateUser(id: number, user: any): Observable<any> {
+    return this._httpClient.put<any>(`${this.apiUrl}/${id}`, user);
   }
 
   // Delete user

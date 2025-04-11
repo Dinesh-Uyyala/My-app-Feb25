@@ -23,6 +23,7 @@ import { BalancePipe } from './balance.pipe';
 import { TokenInterceptor } from './token.interceptor';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { LoaderComponent } from './loader/loader.component';
+import { BookComponent } from './book/book.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { LoaderComponent } from './loader/loader.component';
     BalancePipe,
     CalculatorComponent,
     LoaderComponent,
+    BookComponent,
     
   ],
   imports: [
