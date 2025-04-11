@@ -2,7 +2,10 @@
 <form [formGroup]="loginForm">
     <label>Email:</label>
     <input type="email" formControlName="email"><br>
-    <label>Password:</label>
-    <input type="password" formControlName="password"><br>
+        <label>Password:</label>
+            <input type="{{isVisible ? 'text' : 'password'}}" formControlName="password">
+            <button class="eye-button" type="button" (click)="visible()">
+                {{isVisible ? '👁️' : '👁️'}}
+            </button><br>
     <button class="btn btn-primary" (click)="login()">Login</button>
 </form>

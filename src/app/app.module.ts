@@ -21,7 +21,9 @@ import { Sibling2Component } from './sibling2/sibling2.component';
 import { CapitalDirective } from './capital.directive';
 import { BalancePipe } from './balance.pipe';
 import { TokenInterceptor } from './token.interceptor';
-import { AboutUsModule } from './about-us/about-us.module';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { LoaderComponent } from './loader/loader.component';
+import { BookComponent } from './book/book.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,9 @@ import { AboutUsModule } from './about-us/about-us.module';
     Sibling2Component,
     CapitalDirective,
     BalancePipe,
+    CalculatorComponent,
+    LoaderComponent,
+    BookComponent,
     
   ],
   imports: [
@@ -49,8 +54,7 @@ import { AboutUsModule } from './about-us/about-us.module';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    AboutUsModule
+    ReactiveFormsModule
   ],
   providers: [
     {

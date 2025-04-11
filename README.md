@@ -211,3 +211,131 @@ Git:
 
     git pull origin feature/one
     git pull origin feature/two
+
+
+
+
+    RxJS Operators:
+    ===============
+
+    from, of-> creational operators
+    map -> to alter every data/element
+    filter -> to select some data
+
+    return this._httpClient.get
+
+    return forkjoin(
+        this._httpClient.get('api1'),
+        this._httpClient.get('api2'),
+        this._httpClient.get('api3'),
+    )
+
+    
+
+    concatMap(user=>
+      this._userService.updateUser(user.id,user)
+    )
+
+    return concatMap(
+        this._httpClient.get('api1'),
+        this._httpClient.get('api2'),
+        this._httpClient.get('api3'),
+    )
+
+    forkjoin-> parallel API calls
+    concatMap-> sequential API calls
+    switchmap-> switch between API calls(it calls the new API call)
+    exhaustMap-> switch between API calls(it calls the old API call and rejects new API call)
+    debounceTime-> delay the API call
+
+
+
+
+
+ngContainer: invisible block
+============
+
+<ng-container *ngIf='isLoggedIn'>
+<p>Welcome</p>
+<button>Logout</button>
+</ng-container>
+
+
+ngTemplate:  event checklist
+============
+
+<div *ngIf='isDataReady; else loading'>
+    <p>Data Loaded</p>
+</div>
+
+<ng-template #loading>
+    <p>Data is loading</p>
+</ng-template>
+
+
+ngContent: project data from parent
+==========
+ng-content is used to pass content to a component. It is used to pass content from a parent.
+
+    1) child (card.component.html)
+
+        <div>
+            <ng-content></ng-content>
+        </div>
+
+    2) parent (app.component.html)
+
+        <app-card>
+            <p>This is Data from Parent </p>
+        </app-card>
+
+
+
+ngSubmit:
+=========
+ngSubmit is used to handle form submission. It is used to handle form submission in angular.
+
+
+<form (ngSubmit)='submit()'>
+    <input type='text' [(ngModel)]='name' placeholder="Enter Name">
+    <button type='submit'>Submit</button>
+</form>
+
+
+submit(){
+    console.log("Form Submitted!");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+Advanced Javascript:
+====================
+
+1) var, let and const
+2) Arrow Function vs Function
+3) Closure
+4) call, apply and bind
+    call: person.fullName.call(user,'Chennai','India')
+    apply: person.fullName.apply(user,['Banglore','India'])
+    bind: person.fullName.bind(user,'Banglore','India')
+5) Recursion 
+    function recursiveFunction(){
+    if(baseCondition){
+            return result;
+        }else{
+            return recursiveFunction();
+        }
+    }
+6) Shallow copy and Deep copy
+
+    
+    

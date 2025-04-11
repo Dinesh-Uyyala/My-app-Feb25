@@ -1,16 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
 import { UpperCasePipe } from "@angular/common";
 import { BalancePipe } from "../balance.pipe";
+import { FormControl } from '@angular/forms';
+import { debounceTime, switchMap } from 'rxjs';
+import { ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-vehicle',
   templateUrl: './vehicle.component.html',
-  styleUrls: ['./vehicle.component.css']
+  styleUrls: ['./vehicle.component.css'],
+  encapsulation:ViewEncapsulation.ShadowDom
 })
-export class VehicleComponent {
+export class VehicleComponent implements OnInit{
   term:string='';
   vehicles:any=[];
+
+  searchControl =new FormControl();
+
+  ngOnInit(){
+    this.searchControl.valueChanges.pipe(
+      debounceTime(400),
+      switchMap(search=>this._vehicleService.getFilteredVehicles(search))
+    ).subscribe(
+      (data:any)=>{
+        console.log(data);
+      },(err:any)=>{
+        alert("Internal Server Error");
+      }
+    )
+  }
 
   filter(){
   this._vehicleService.getFilteredVehicles(this.term).subscribe(
