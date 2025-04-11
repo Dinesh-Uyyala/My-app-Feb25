@@ -15,6 +15,7 @@ import { ViewEncapsulation } from '@angular/core';
 export class VehicleComponent implements OnInit{
   term:string='';
   vehicles:any=[];
+  isLoading=true;
 
   searchControl =new FormControl();
 
@@ -64,6 +65,7 @@ loadVehicles(){
     (data:any)=>{
       console.log(data);
       this.vehicles=data;
+      this.isLoading=false;
       console.log(this.vehicles);
     },(err:any)=>{
       alert("Internal Server Error");
@@ -98,4 +100,19 @@ pagination(){
     }
   )
 }
+
+// fetchVehicles() {
+//   this.isLoading = true;
+
+//   fetch('https://cors-anywhere.herokuapp.com/https://picsum.photos/v2/list?page=1&limit=100')
+//     .then(res => res.json())
+//     .then(data => {
+//       this.vehicles = data;
+//       this.isLoading = false;
+//     })
+//     .catch(error => {
+//       console.error('Error fetching vehicles:', error);
+//       this.isLoading = false;
+//     });
+// }
 }
